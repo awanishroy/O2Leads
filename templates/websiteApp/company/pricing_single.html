@@ -1,0 +1,68 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+<meta name="description" content="{{ Seo.description }}">
+<meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<section class="sub_banner07"
+    style="height: 100vh; background-image: url('{% static 'assets/image/banner/bg_home_banner.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+    <div class="inner_sub_banner">
+        <div class="container">
+            <div class="sub_banner_content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <h1 class="secondary_font color_fff">{{Pricing}}</h1>
+                        <p>{{Description}}</p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb_list">
+                <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home &gt;</a></li>
+                <li><a class="text-uppercase" href="">{{Pricing}}</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="padding_bottom_100 padding_top_100">
+    <div class="container">
+        <div class="section_heading text-center margin_bottom_50">
+            <h2 class="secondary_font color_000 margin_bottom_15 aos-init aos-animate" data-aos-duration="800"
+                data-aos="fade-up">Our {{Pricing}} Plans</h2>
+        </div>
+        <div class="outer_shared_hosting_plan">
+            <div class="row justify-content-center">
+                {% for plan in Plans %}
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="card pricing-card text-center mb-4">
+                            <div class="card-header bg-gradient-primary text-white py-4">
+                                <h2 class="mb-0"><span class="currency">₹</span>{{ plan.PR_PRICE }}<span class="period">/month</span></h2>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title font-weight-bold">{{ plan.PR_NAME }}</h4>
+                                <ul class="list-group list-group-flush">
+                                    {% for feature in plan.PR_FEATURES.splitlines %}
+                                    <li class="list-group-item">{{ feature }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <a href="{% url 'otleads.contact_us' %}" class="btn btn-gradient mt-4">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock section %}

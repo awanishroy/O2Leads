@@ -1,0 +1,38 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+    <meta name="description" content="{{ Seo.description }}">
+    <meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<section class="sub_banner07" style="height: 100vh; background-image: url('{% static 'assets/images/sub_page_banner02.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+    <div class="inner_sub_banner">
+        <div class="container">
+            <div class="sub_banner_content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <h1 class="secondary_font color_fff">Help</h1>
+                        <p>o2 Infosystems is a global provider of cloud solution</p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb_list">
+                <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home  &gt;</a></li>
+                <li><a class="text-uppercase" href="">Help</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock section %}

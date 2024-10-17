@@ -1,0 +1,100 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+    <meta name="description" content="{{ Seo.description }}">
+    <meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<!-- Hero Section -->
+<section class="sub_banner07" style="height: 100vh; background-image: url('{% static 'assets/image/banner/bg_home_banner.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+    <div class="inner_sub_banner">
+        <div class="container">
+            <div class="sub_banner_content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <h1 class="secondary_font color_fff">Our Clients</h1>
+                        <p>o2 Infosystems is proud to serve innovative businesses worldwide with our leading telecom, cloud, and software solutions.</p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb_list">
+                <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home &gt;</a></li>
+                <li><a class="text-uppercase" href="">Our Clients</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="padding_bottom_100 padding_top_100 bg-light">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="section_heading text-center margin_bottom_50">
+            <h2 class="secondary_font color_000 margin_bottom_15">Our Trusted Clients</h2>
+            <p>We take pride in collaborating with industry leaders and innovative businesses across various sectors. Here are some of the clients who trust o2 Infosystems for their telecom, cloud, and software solutions.</p>
+        </div>
+        
+        <!-- Client Logos -->
+        <div class="row text-center justify-content-center">
+            <div class="col-xs-6 col-md-3 mb-4">
+                <img src="{% static 'assets/image/client/tata.jpg' %}" alt="Tata" class="img-fluid grayscale">
+            </div>
+            <div class="col-xs-6 col-md-3 mb-4">
+                <img src="{% static 'assets/image/client/jio.png' %}" alt="Reliance Jio" class="img-fluid grayscale">
+            </div>
+            <div class="col-xs-6 col-md-3 mb-4">
+                <img src="{% static 'assets/image/client/sct.png' %}" alt="SCT" class="img-fluid grayscale">
+            </div>
+            <div class="col-xs-6 col-md-3 mb-4">
+                <img src="{% static 'assets/image/client/spectranet.png' %}" alt="Spectranet" class="img-fluid grayscale">
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="row mt-5">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4">
+                <div class="card testimonial-card shadow-sm">
+                    <div class="card-body">
+                        <p class="testimonial-text">"o2 Infosystems has revolutionized how we handle customer data. Their CRM has made us more efficient, and their team has been incredible throughout the process."</p>
+                        <h5 class="font-weight-bold">Rakesh Panday</h5>
+                        <p class="text-muted">Marketing Manager, Tata Consultancy Services</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4">
+                <div class="card testimonial-card shadow-sm">
+                    <div class="card-body">
+                        <p class="testimonial-text">"Their telecom solutions are simply the best. We were able to scale our customer support and automate processes seamlessly. Highly recommend o2 Infosystems."</p>
+                        <h5 class="font-weight-bold">Anita Singh</h5>
+                        <p class="text-muted">Project Manager, Reliance Jio</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4">
+                <div class="card testimonial-card shadow-sm">
+                    <div class="card-body">
+                        <p class="testimonial-text">"From cloud solutions to business automation, o2 Infosystems has been instrumental in helping us streamline operations and reduce costs."</p>
+                        <h5 class="font-weight-bold">Vikram Thakur</h5>
+                        <p class="text-muted">Branch Manager, HDFC Bank</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock section %}

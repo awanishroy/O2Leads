@@ -1,0 +1,94 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+    <meta name="description" content="{{ Seo.description }}">
+    <meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<section class="sub_banner07" style="height: 100vh; background-image: url('{% static 'assets/images/sub_page_banner05.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+    <div class="inner_sub_banner">
+        <div class="container">
+            <div class="sub_banner_content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <h1 class="secondary_font color_fff">Policy</h1>
+                        <p>o2 Infosystems is a global provider of cloud solution</p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb_list">
+                <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home  &gt;</a></li>
+                <li><a class="text-uppercase" href="">Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="padding_bottom_100 padding_top_100">
+    <div class="container">
+        <div class="section_heading text-center margin_bottom_50">
+            <h2 class="secondary_font color_000 margin_bottom_15">Privacy Policy</h2>
+            <p>Your privacy is important to us at Work Observer. This Privacy Policy outlines how we collect, use, and protect your personal information.</p>
+        </div>
+        <div class="privacy_policy_content">
+            <h3>1. Information We Collect</h3>
+            <p>We collect the following types of information when you use our services:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> Name, email address, contact information, and payment details when you sign up or make a purchase.</li>
+                <li><strong>Usage Data:</strong> Information about your interaction with our services, such as page views, clicks, and browsing patterns.</li>
+                <li><strong>Device Information:</strong> Details about the device you use to access our services, including IP address, browser type, and operating system.</li>
+            </ul>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the collected information to:</p>
+            <ul>
+                <li>Provide and improve our services</li>
+                <li>Process transactions and manage your account</li>
+                <li>Send you updates, newsletters, and promotional content (you can opt-out anytime)</li>
+                <li>Enhance security and prevent fraudulent activity</li>
+                <li>Analyze and improve website performance</li>
+            </ul>
+
+            <h3>3. How We Protect Your Information</h3>
+            <p>We implement industry-standard security measures, including encryption, firewalls, and secure data storage, to protect your personal information. Only authorized personnel have access to your data, and we regularly review our security practices to ensure your information is safeguarded.</p>
+
+            <h3>4. Sharing Your Information</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share your data with trusted partners for the purpose of operating our business, such as payment processors and email service providers. These partners are required to keep your information confidential and secure.</p>
+
+            <h3>5. Your Data Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your personal data</li>
+                <li>Request correction or deletion of your information</li>
+                <li>Object to the processing of your data or withdraw consent</li>
+            </ul>
+            <p>If you wish to exercise any of these rights, please contact us at <a href="mailto:support@o2leads.com">support@o2leads.com</a>.</p>
+
+            <h3>6. Cookies</h3>
+            <p>We use cookies to improve your browsing experience and to personalize content. Cookies help us understand user behavior and improve site functionality. You can manage your cookie preferences through your browser settings.</p>
+
+            <h3>7. Third-Party Links</h3>
+            <p>Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of these websites before providing any personal information.</p>
+
+            <h3>8. Updates to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page, and we will notify you if the changes are significant. Please check back periodically for updates.</p>
+
+            <h3>9. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@o2leads.com">support@o2leads.com</a></p>
+            <p><strong>Address:</strong> 123 Work Observer St, Business City, Country</p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock section %}

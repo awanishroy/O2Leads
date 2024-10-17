@@ -1,0 +1,111 @@
+{% extends 'websiteApp/form/base.html' %}
+{% load static %}
+{% block title %}Industry{% endblock title %}
+{% block main-content %}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card h-auto mb-2">
+                    <div id="element0" class="overlay-content1 popup4 square">
+                        <div class="popup_body modal-body overflow-auto scrollbar" id="style-2">
+                            <div class="col-sm-12 mb-4 mt-2 force-overflow">
+                                <div class="create_fluid">
+                                    <span class="box_heading">&nbsp;</span>
+                                    <div class="column mt--20 col_100 mb-0">
+                                        <form method="post" id="industry-form" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <input type="hidden" id="PR_TOKEN" name="PR_TOKEN" value="{{ data.PR_TOKEN }}">
+                                            <input type="hidden" id="PR_PLAN_ID" name="PR_PLAN_ID" value="{{ data.PR_PLAN_ID }}">
+                                            
+                                            <!-- Industry Name -->
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="PR_NAME">Industry Name <span style="color: red;">*</span></label>
+                                                        <input type="text" class="form-control" id="PR_NAME" name="PR_NAME" value="{{ data.PR_NAME|default_if_none:'' }}">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="PR_WEBSITE">Website</label>
+                                                        <select class="form-control" id="PR_WEBSITE" name="PR_WEBSITE">
+                                                            {% for website in websites %}
+                                                                <option value="{{ website.id }}" {% if website.id == data.PR_WEBSITE_id %}selected{% endif %}>{{ website.name }}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                {% comment %} <!-- Slug (optional) -->
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="PR_SLUG">Slug</label>
+                                                        <input type="text" class="form-control" id="PR_SLUG" name="PR_SLUG" value="{{ data.PR_SLUG|default_if_none:'' }}">
+                                                    </div>
+                                                </div> {% endcomment %}
+                                            </div>
+
+                                            <!-- Description and Content 1 -->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label for="PR_DESCRIPTION">Description</label>
+                                                        <textarea class="form-control" id="PR_DESCRIPTION" name="PR_DESCRIPTION">{{ data.PR_DESCRIPTION|default_if_none:'' }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label for="PR_CONTENT_1">Content</label>
+                                                        <textarea class="form-control summernote" id="PR_CONTENT_1" name="PR_CONTENT_1">{{ data.PR_CONTENT_1|default_if_none:'' }}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Banner Image URL -->
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="PR_BANNER_IMAGE">Banner Image URL</label>
+                                                        <input type="text" class="form-control" id="PR_BANNER_IMAGE" name="PR_BANNER_IMAGE" value="{{ data.PR_BANNER_IMAGE|default_if_none:'' }}">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status -->
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="PR_STATUS">Status</label>
+                                                        <input type="number" class="form-control" id="PR_STATUS" name="PR_STATUS" value="{{ data.PR_STATUS|default_if_none:0 }}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                           
+
+                                            <!-- Submit Button -->
+                                            <div class="col-md-12">
+                                                <hr>
+                                                <div class="footer_btn col_100 pull-left">
+                                                    {% if action == "add" %}
+                                                    <button type="submit" class="btn btn-primary btn-sm"><span class="fas fa-save"></span> Submit</button>
+                                                    {% elif action == "update" %}
+                                                    <button type="submit" class="btn btn-primary btn-sm"><span class="fas fa-save"></span> Update</button>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'websiteApp/form/pricing/pricing-plan-form-jquery.html' %}
+
+{% endblock main-content %}

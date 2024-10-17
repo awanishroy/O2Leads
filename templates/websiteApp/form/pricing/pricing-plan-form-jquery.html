@@ -1,0 +1,82 @@
+    <script>
+        $(document).ready(function() {
+          $('.summernote').summernote({
+            height: 400,
+            fontNames: ['Arial', 'Courier New', 'Roboto', 'Times New Roman', 'Verdana'],
+            fontNamesIgnoreCheck: ['Arial', 'Courier New', 'Roboto'],
+            toolbar: [
+              ['style', ['style']],
+              ['font', ['bold', 'italic', 'underline', 'clear']]
+              ['fontname', ['fontname']],
+              ['fontsize', ['fontsize']],
+              ['color', ['color']],
+              ['para', ['ul', 'ol', 'paragraph', 'height']],
+              ['table', ['table']],
+              ['insert', ['link', 'picture', 'video']],
+              ['view', ['fullscreen', 'codeview', 'help']],
+              ['history', ['undo', 'redo']]
+            ],
+            callbacks: {
+              onImageUpload: function(files) {
+                console.log('Image uploaded: ', files);
+              },
+              onMediaDelete: function(target) {
+                console.log('Media deleted:', target);
+              }
+            }
+          });
+        });
+
+        $(document).ready(function() {
+            $("#industry-form").validate({
+                rules: {
+                    PR_NAME: { required: true },
+                    // PR_SLUG: { required: false },
+                    PR_DESCRIPTION: { required: true },
+                    PR_BANNER_IMAGE: { required: false },
+                    PR_STATUS: { required: true, number: true },
+                },
+
+                errorElement: 'span',
+                errorPlacement: function(error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.form-group').append(error);
+                },
+
+                highlight: function(element) {
+                    $(element).addClass('is-invalid');
+                },
+
+                unhighlight: function(element) {
+                    $(element).removeClass('is-invalid');
+                },
+
+                submitHandler: function(form) {
+                    var form_data = new FormData($(form)[0]);
+                    var PR_PLAN_ID = $("#PR_PLAN_ID").val();
+                    var url = (PR_PLAN_ID) ? '/api/update-plan/' + PR_PLAN_ID : '/api/add-plan';
+                    $.ajax({
+                        url: url,
+                        type: 'post',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            if (response.STATUS === 'SUCCESS') {
+                                $(form)[0].reset();
+                                swal('', response.MESSAGE, 'success').then(() => {
+                                    location.reload();
+                                });
+                            } else {
+                                swal('', response.MESSAGE, 'error');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(status);
+                            // $(form).validate().showErrors({ "": 'An error occurred: ' + error });
+                        }
+                    });
+                }
+            });
+        });
+    </script>

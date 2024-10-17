@@ -1,0 +1,512 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+<meta name="description" content="{{ Seo.description }}">
+<meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+    <!---------------------------------------------------------- Home Page Banner Start ------------------------------------------------>
+    <section class="home_banner_section">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Slide 1: Free Trial for Cloud Solutions -->
+                <div class="carousel-item obser_crousel active"
+                    style="background-image: url('{% static 'assets/image/banner/home_banner2.jpg' %}'); background-size: cover; background-position: center;">
+                    <div class="container banner_content h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 banner-text ">
+                                <h1 class="mb-3 secondary_font text-light">Start Your Free Trial of Our Cloud Solutions</h1>
+                                <p class="text-light">Discover the power of scalable cloud solutions from o2 Infosystems. Boost your business with our free 30-day trial and experience seamless hosting and performance.</p>
+                                <a href="{% url 'otleads.contact_us' %}" class="mb-3 banner_btn mt-3">Start Free Trial</a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-5 d-none d-md-block">
+                                <img class="img-fluid" src="{% static 'assets/images/hero_banner.png' %}" alt="o2 Infosystems Cloud Solutions">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Telecom and Hosted IVR Solutions -->
+                <div class="carousel-item obser_crousel"
+                    style="background-image: url('{% static 'assets/image/banner/home_banner2.jpg' %}'); background-size: cover; background-position: center;">
+                    <div class="container banner_content h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 banner-text">
+                                <h1 class="mb-3 secondary_font text-light">Telecom and Hosted IVR Solutions</h1>
+                                <p class="text-light">Enhance your customer communication with our telecom and hosted IVR services. Automate calls, manage workflows, and provide personalized customer experiences.</p>
+                                <a href="{% url 'otleads.contact_us' %}" class="mb-3 banner_btn mt-3">Learn More</a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-5 d-none d-md-block">
+                                <img class="img-fluid" src="{% static 'assets/images/hero_banner.png' %}" alt="o2 Infosystems Telecom Services">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Lead Generation and Promotional Services -->
+                <div class="carousel-item obser_crousel"
+                    style="background-image: url('{% static 'assets/image/banner/home_banner2.jpg' %}'); background-size: cover; background-position: center;">
+                    <div class="container banner_content h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 banner-text">
+                                <h1 class="mb-3 secondary_font text-light">Generate High-Quality Leads</h1>
+                                <p class="text-light">Drive more sales with our targeted lead generation services. Leverage our promotional tools to reach the right audience and grow your business efficiently.</p>
+                                <a href="{% url 'otleads.contact_us' %}" class="mb-3 banner_btn mt-3">Get Started</a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-5 d-none d-md-block">
+                                <img class="img-fluid" src="{% static 'assets/images/hero_banner.png' %}" alt="o2 Infosystems Lead Generation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Custom Design & Development Services -->
+                <div class="carousel-item obser_crousel"
+                    style="background-image: url('{% static 'assets/image/banner/home_banner2.jpg' %}'); background-size: cover; background-position: center;">
+                    <div class="container banner_content h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 banner-text">
+                                <h1 class="mb-3 secondary_font text-light">Custom Design & Development Services</h1>
+                                <p class="text-light">Transform your vision into reality with our design and development services. From website development to mobile apps, o2 Infosystems offers bespoke solutions tailored to your needs.</p>
+                                <a href="{% url 'otleads.contact_us' %}" class="mb-3 banner_btn mt-3">Explore Solutions</a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-5 d-none d-md-block">
+                                <img class="img-fluid" src="{% static 'assets/images/hero_banner.png' %}" alt="o2 Infosystems Design and Development">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!---------------------------------------------------------- Home Page Banner End --------------------------------------------------->
+
+    <!---------------------------------------------------------- Card Section Start  ---------------------------------------------------->
+    <section class="padding_top_100">
+        <div class="container">
+            <div class="hosting_plan_outer_box">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 build_your_website">
+                        <h1 class="secondary_font aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">Transform Your Business with o2 Infosystems</h1>
+                        <p class="mt-3 text-light" data-aos-duration="1000" data-aos="fade-up">
+                            o2 Infosystems offers end-to-end business solutions, including design, telecom, and cloud services. Whether you're looking to enhance your customer engagement, streamline telecom operations, or drive lead generation, our innovative platform is built to meet your business needs. Discover our services and start boosting your efficiency today.
+                        </p>
+                        <div class="price_box" data-aos-duration="1000" data-aos="fade-up">Plans Starting at ₹6999/month</div>
+                        <a href="{% url 'otleads.contact_us' %}" class="btn_plans mt-3">Get Started</a>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 find_domain_box">
+                        <h6 class="find_domain_content aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">Comprehensive Business Solutions</h6>
+                        <h1 class="secondary_font aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Enhance Your Business Efficiency</h1>
+                        <p class="text-dark mt-3" data-aos-duration="1200" data-aos="fade-up">
+                            From lead generation and promotional services to hosted IVR and telecom solutions, o2 Infosystems provides customized tools to meet the diverse needs of businesses across industries. See how our solutions can streamline your operations, improve communication, and boost overall performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Customer Management -->
+                    <div class="col-xl-4 col-lg-4 hosting_plan_box01">
+                        <h1 class="secondary_font" data-aos-duration="800" data-aos="fade-up">Customer Engagement Solutions</h1>
+                        <div class="price_box" data-aos-duration="1000" data-aos="fade-up">Starting at ₹6999/month</div>
+                        <a href="{% url 'otleads.contact_us' %}" class="btn_plan mt-3">Learn More</a>
+                    </div>
+                    <!-- Inventory Management -->
+                    <div class="col-xl-4 col-lg-4 hosting_plan_box02">
+                        <h1 class="secondary_font" data-aos-duration="800" data-aos="fade-up">Cloud Hosting & Data Solutions</h1>
+                        <div class="price_box" data-aos-duration="1000" data-aos="fade-up">Starting at ₹6999/month</div>
+                        <a href="{% url 'otleads.contact_us' %}" class="btn_plan mt-3">Learn More</a>
+                    </div>
+                    <!-- HR Management -->
+                    <div class="col-xl-4 col-lg-4 hosting_plan_box03">
+                        <h1 class="secondary_font" data-aos-duration="800" data-aos="fade-up">Telecom & IVR Solutions</h1>
+                        <div class="price_box" data-aos-duration="1000" data-aos="fade-up">Starting at ₹6999/month</div>
+                        <a href="{% url 'otleads.contact_us' %}" class="btn_plan mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------------------------  Card Section End  ----------------------------------------------------->
+
+    <!--------------------------------------------------------- Guarantee Section Start ------------------------------------------------->
+    <section class="padding_bottom_100 padding_top_100 hosting_guarantee">
+        <div class="container banner_content">
+            <div class="section_heading text-center margin_bottom_50">
+                <h2 class="secondary_font color_000 aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">o2 Infosystems GUARANTEE</h2>
+            </div>
+            <div class="row">
+                <!-- Money Back Guarantee -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="guarantee_box tablet_view text-center first_guarantee_box">
+                        <figure data-aos-duration="1000" data-aos="fade-up" class="aos-init">
+                            <img src="{% static 'assets/images/svg/guarantee_img01.svg' %}" alt="Money Back Guarantee">
+                        </figure>
+                        <h5 class="secondary_font aos-init" data-aos-duration="1200" data-aos="fade-up">Money Back Guarantee</h5>
+                        <p>Try our services risk-free with a 30-day money-back guarantee if you're not satisfied.</p>
+                    </div>
+                </div>
+
+                <!-- 24/7 Live Support -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="guarantee_box tablet_view text-center">
+                        <figure data-aos-duration="1000" data-aos="fade-up" class="aos-init">
+                            <img src="{% static 'assets/images/svg/guarantee_img02.svg' %}" alt="24/7 Live Support">
+                        </figure>
+                        <h5 class="secondary_font aos-init" data-aos-duration="1200" data-aos="fade-up">24/7 Live Support</h5>
+                        <p>Our expert support team is available 24/7 to help with any issues or questions you may have.</p>
+                    </div>
+                </div>
+
+                <!-- Fastest Service Experience -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="guarantee_box mobile_view text-center">
+                        <figure data-aos-duration="1000" data-aos="fade-up" class="aos-init">
+                            <img src="{% static 'assets/images/svg/guarantee_img03.svg' %}" alt="Fastest Service Experience">
+                        </figure>
+                        <h5 class="secondary_font aos-init" data-aos-duration="1200" data-aos="fade-up">Fastest Service Experience</h5>
+                        <p>Experience lightning-fast solutions tailored to keep your business running smoothly at all times.</p>
+                    </div>
+                </div>
+
+                <!-- o2 Infosystems Cloud -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="guarantee_box text-center last_guarantee_box">
+                        <figure data-aos-duration="1000" data-aos="fade-up" class="aos-init">
+                            <img src="{% static 'assets/images/svg/guarantee_img04.svg' %}" alt="o2 Infosystems Cloud Solutions">
+                        </figure>
+                        <h5 class="secondary_font aos-init" data-aos-duration="1200" data-aos="fade-up">o2 Infosystems Cloud Solutions</h5>
+                        <p>Take advantage of our cloud infrastructure to deliver secure, scalable, and efficient services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------- Guarantee Section End-- -------------------------------------------------->
+
+    <!--------------------------------------------------------- Feature Section Start ---------------------------------------------------->
+    <section class="padding_bottom_100 padding_top_100 bg_78ad41 feature_section">
+        <div class="container">
+            <div class="outer_feature_box">
+                <div class="row">
+                    <!-- Feature Heading -->
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="feature_heading">
+                            <h1 class="secondary_font aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">
+                                o2 Infosystems Features
+                            </h1>
+                            <p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">
+                                Our diverse range of solutions empowers businesses with the right tools to accelerate growth and efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature List -->
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="row margin_bottom_30 margin_top_15">
+                            <!-- Feature 1: Optimized Performance -->
+                            <div class="col-xl-6 col-lg-6 feature_box_tablet01">
+                                <div class="feature_box">
+                                    <figure class="img01 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">
+                                        <img src="{% static 'assets/images/feature_img01.png' %}" alt="Optimized Performance">
+                                    </figure>
+                                    <h3 class="secondary_font aos-init aos-animate" data-aos-duration="1200" data-aos="fade-up">
+                                        Optimized Performance
+                                    </h3>
+                                    <p data-aos-duration="1400" data-aos="fade-up" class="aos-init aos-animate">
+                                        Our cloud-hosted services and telecom solutions ensure peak performance under any condition, helping you scale with ease.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2: Pre-Built Integrations -->
+                            <div class="col-xl-6 col-lg-6 feature_box_tablet02">
+                                <div class="feature_box">
+                                    <figure class="img02 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">
+                                        <img src="{% static 'assets/images/feature_img02.png' %}" alt="Pre-Built Integrations">
+                                    </figure>
+                                    <h3 class="secondary_font aos-init aos-animate" data-aos-duration="1200" data-aos="fade-up">
+                                        Pre-Built Integrations
+                                    </h3>
+                                    <p data-aos-duration="1400" data-aos="fade-up" class="aos-init aos-animate">
+                                        Seamlessly integrate with platforms like Salesforce, HubSpot, and more to drive automation and improve workflow efficiency.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Feature 3: Enterprise-Grade Security -->
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="feature_box">
+                                    <figure class="img03 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">
+                                        <img src="{% static 'assets/images/feature_img03.png' %}" alt="Enterprise-Grade Security">
+                                    </figure>
+                                    <h3 class="secondary_font aos-init aos-animate" data-aos-duration="1200" data-aos="fade-up">
+                                        Enterprise-Grade Security
+                                    </h3>
+                                    <p data-aos-duration="1400" data-aos="fade-up" class="aos-init">
+                                        Our hosted solutions come with advanced security protocols, ensuring data privacy, compliance, and protection for your business.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4: Scalable Management Tools -->
+                            <div class="col-xl-6 col-lg-6 feature_box_tablet03">
+                                <div class="feature_box">
+                                    <figure class="img04 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">
+                                        <img src="{% static 'assets/images/feature_img04.png' %}" alt="Scalable Management Tools">
+                                    </figure>
+                                    <h3 class="secondary_font aos-init aos-animate" data-aos-duration="1200" data-aos="fade-up">
+                                        Scalable Management Tools
+                                    </h3>
+                                    <p data-aos-duration="1400" data-aos="fade-up" class="aos-init">
+                                        From CRM systems to lead generation tools, our scalable solutions grow with your business, ensuring you stay ahead of the competition.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------- Feature Section End ------------------------------------------------------->
+
+    <!---------------------------------------------------------- Success Story Start ------------------------------------------------------>
+    <section class="padding_bottom_100 success_story_section">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="section_heading text-center margin_bottom_60">
+                <h2 class="secondary_font color_000 margin_bottom_15 aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">
+                    Success Stories
+                </h2>
+                <p data-aos-duration="1000" data-aos="fade-up" class="aos-init aos-animate">
+                    Empowering businesses with innovative design, telecom, cloud, and lead generation solutions.
+                </p>
+                <a href="{% url 'otleads.contact_us' %}" class="mb-3 btn_success_story aos-init" data-aos-duration="1200" data-aos="fade-up">
+                    Discover o2 Infosystems
+                </a>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="row">
+                <!-- CRMs Deployed -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer red_box">
+                        <div class="inner_counter_outer">
+                            <div class="count_box secondary_font color_fa2c68 aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                1320
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_fa2c68 aos-init" data-aos-duration="1200" data-aos="fade-up">Service Provide</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Streamlining customer management for businesses through our custom Cloud solutions.
+                    </p>
+                </div>
+
+                <!-- Leads Generated -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer purple_box">
+                        <div class="inner_counter_outer">
+                            <div class="secondary_font count_box color_5d088e aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                95k+
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_5d088e aos-init" data-aos-duration="1200" data-aos="fade-up">Leads Generated</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Empowering businesses to grow through targeted lead generation and promotional services.
+                    </p>
+                </div>
+
+                <!-- Satisfied Clients -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer green_box">
+                        <div class="inner_counter_outer">
+                            <div class="secondary_font count_box color_32d05e aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                480+
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_32d05e aos-init" data-aos-duration="1200" data-aos="fade-up">Satisfied Clients</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Businesses across industries trust o2 Infosystems for telecom, cloud, and hosting solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------ Success Story End ------------------------------------------------------->
+
+    <!------------------------------------------------------------- Testimonial Start ------------------------------------------------------>
+    <div class="client-sec padding_bottom_100 padding_top_100 bg_f5f5f5">
+        <div class="container">
+            <div class="row">
+                <!-- Testimonial Section -->
+                <div class="col-lg-6 col-md-6 testimonial_sec padding_top_20">
+                    <h1 class="font_size_48 color_000 margin_bottom_35 line_height_48 secondary_font font_weight_900 text-uppercase aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">
+                        Client Testimonials
+                    </h1>
+                    <p class="margin_bottom_35 color_000 font_size_16 line_height_24 aos-init" data-aos-duration="1000" data-aos="fade-up">
+                        "We chose o2leads for our cloud and telecom solutions, and it has transformed our business. Their CRM tools helped us manage leads more efficiently and scale operations. I highly recommend their services!"
+                    </p>
+                    <div class="client_info">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-3 aos-init" data-aos-duration="3000" data-aos="zoom-in">
+                                <img class="img_br" src="{% static 'assets/images/client-img.png' %}">
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-9">
+                                <div class="client_info">
+                                    <h5 class="padding_top_25 padding_bottom_5 font_size_24 color_000 d-block secondary_font aos-init" data-aos-duration="800" data-aos="fade-up">
+                                        <b>Rajesh Gupta</b>
+                                    </h5>
+                                    <span class="font_size_16 line_height_22 color_000 aos-init" data-aos-duration="1200" data-aos="fade-up">CEO, Tech Innovators</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Logos Section -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="row margin_bottom_35 client-logo mobile_margin">
+                        <!-- Popular Indian Brands/Clients -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-center aos-init aos-animate" data-aos-duration="800" data-aos="zoom-in-down">
+                            <img src="{% static 'assets/image/client/tata.jpg' %}" class="img-fluid" alt="Tata">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-center aos-init aos-animate" data-aos-duration="1000" data-aos="zoom-in-down">
+                            <img src="{% static 'assets/image/client/spectranet.png' %}" class="img-fluid" alt="Spectranet">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-center aos-init aos-animate" data-aos-duration="1200" data-aos="zoom-in-down">
+                            <img src="{% static 'assets/image/client/sct.png' %}" class="img-fluid" alt="ACT">
+                        </div>
+                    </div>
+                    <div class="row margin_bottom_35 client-logo mobile_margin">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-center aos-init" data-aos-duration="1400" data-aos="zoom-in-down">
+                            <img src="{% static 'assets/image/client/jio.png' %}" class="img-fluid" alt="Jio">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------- Testimonial End -------------------------------------------------------->
+
+    <!-------------------------------------------------------------- Blog Start ------------------------------------------------------------>
+    <section class="color_ecf4f7 padding_top_100 padding_bottom_200 blog_section">
+        <div class="section_heading text-center margin_bottom_50">
+            <h2 class="secondary_font color_000 aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">Our Latest Blog</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="blog" class="three-column col-xl-12">
+                    <div class="row">
+                        <!-- Blog Post 1 -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="float-left w-100 post-item border margin_bottom_20">
+                                <div class="post-item-wrap position-relative">
+                                    <div class="post-image">
+                                        <a href="#">
+                                            <img alt="How CRM Solutions Transform Business Relationships" src="{% static 'assets/images/standard_post_img01.jpg' %}">
+                                        </a>
+                                        <span class="post-meta-category">
+                                            <a href="#">Business</a>
+                                        </span>
+                                    </div>
+                                    <div class="post-item-description">
+                                        <span class="post-meta-date">
+                                            <i class="fa fa-calendar-o" aria-hidden="true"></i>October 9, 2024</span>
+                                        <span class="post-meta-comments">
+                                            <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>18 Comments</a>
+                                        </span>
+                                        <h2>
+                                            <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">How CRM Solutions Transform Business</a>
+                                        </h2>
+                                        <p>Customer Relationship Management (CRM) software is transforming the way businesses engage with their clients. By centralizing customer data, CRM tools help businesses create personalized experiences and long-lasting relationships. we explore how integrating CRM can boost.</p>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 2 -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="float-left w-100 post-item border margin_bottom_20">
+                                <div class="post-item-wrap position-relative">
+                                    <div class="post-image">
+                                        <a href="#">
+                                            <img alt="The Rise of AI in Healthcare Management" src="{% static 'assets/images/standard_post_img02.jpg' %}">
+                                        </a>
+                                        <span class="post-meta-category">
+                                            <a href="#">Healthcare</a>
+                                        </span>
+                                    </div>
+                                    <div class="post-item-description">
+                                        <span class="post-meta-date">
+                                            <i class="fa fa-calendar-o" aria-hidden="true"></i>October 5, 2024</span>
+                                        <span class="post-meta-comments">
+                                            <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>42 Comments</a>
+                                        </span>
+                                        <h2>
+                                            <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">The Rise of AI in Healthcare Management</a>
+                                        </h2>
+                                        <p>Artificial intelligence is revolutionizing the healthcare industry, from diagnostics to patient care management. In this blog, we discuss how AI-driven tools are streamlining workflows for healthcare professionals and improving patient outcomes with data-driven insights.</p>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 3 -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="float-left w-100 post-item border margin_bottom_20">
+                                <div class="post-item-wrap position-relative">
+                                    <div class="post-image">
+                                        <a href="#">
+                                            <img alt="Inventory Management: The Key to Streamlining Operations" src="{% static 'assets/images/standard_post_img04.jpg' %}">
+                                        </a>
+                                        <span class="post-meta-category">
+                                            <a href="#">Operations</a>
+                                        </span>
+                                    </div>
+                                    <div class="post-item-description">
+                                        <span class="post-meta-date">
+                                            <i class="fa fa-calendar-o" aria-hidden="true"></i>September 29, 2024</span>
+                                        <span class="post-meta-comments">
+                                            <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>25 Comments</a>
+                                        </span>
+                                        <h2>
+                                            <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">Inventory Management: The Key to Streamlining Operations</a>
+                                        </h2>
+                                        <p>Effective inventory management is critical to a business’s success. In this article, we explore the benefits of real-time inventory tracking, minimizing stockouts, and enhancing your supply chain visibility to streamline business operations.</p>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------- Blog End -------------------------------------------------------------->
+
+
+{% endblock section %}

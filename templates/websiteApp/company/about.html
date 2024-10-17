@@ -1,0 +1,170 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+    <meta name="description" content="{{ Seo.description }}">
+    <meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+   <!-- Hero Section -->
+    <section class="sub_banner07" style="height: 100vh; background-image: url('{% static 'assets/images/sub_page_banner02.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+        <div class="inner_sub_banner">
+            <div class="container">
+                <div class="sub_banner_content">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7">
+                            <h1 class="secondary_font color_fff">About Us</h1>
+                            <p>o2 Infosystems is a global provider of CRM, telecom, cloud hosting, and business automation solutions.</p>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outer_breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb_list">
+                    <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home  &gt;</a></li>
+                    <li><a class="text-uppercase" href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About History Section -->
+    <section class="padding_top_100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 col-lg-10 col-md-10 m-auto">
+                    <div class="section_heading text-center margin_bottom_80">
+                        <h2 class="secondary_font color_000 margin_bottom_15">o2 Infosystems History</h2>
+                        <p>Explore our journey as we revolutionize CRM, telecom services, and business automation solutions for organizations globally.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="outer_shared_hosting_plan">
+                <div class="row">
+                    <!-- 2019 Timeline -->
+                    <div class="col-xl-4 col-lg-4 col-md-12 bg_d74141 outer_our_history_box history_red_box">
+                        <div class="our_history_box">
+                            <h3 class="secondary_font">2019</h3>
+                            <p>o2 Infosystems introduced AI-powered analytics to its CRM solutions, empowering businesses to make data-driven decisions. We also expanded into new markets, establishing ourselves as a global leader in telecom and cloud services.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2020 Timeline -->
+                    <div class="col-xl-4 col-lg-4 col-md-12 bg_faa51e outer_our_history_box history_yellow_box">
+                        <div class="our_history_box">
+                            <h3 class="secondary_font">2020</h3>
+                            <p>In response to the global pandemic, we rapidly adapted to support businesses in transitioning to remote work. Our cloud-based solutions became critical in maintaining customer relationships and driving business efficiency in a remote environment.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2021 Timeline -->
+                    <div class="col-xl-4 col-lg-4 col-md-12 bg_2c5cfa outer_our_history_box history_blue_box">
+                        <div class="our_history_box">
+                            <h3 class="secondary_font">2021</h3>
+                            <p>With a focus on automation and security, we enhanced our platform to serve over 500 clients globally. Our innovative solutions helped businesses streamline their processes, reduce costs, and improve productivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .our_history_box {
+            padding: 30px;
+            color: #ffffff;
+        }
+
+        .history_red_box {
+            background-color: #d74141;
+        }
+
+        .history_yellow_box {
+            background-color: #faa51e;
+        }
+
+        .history_blue_box {
+            background-color: #2c5cfa;
+        }
+
+        .secondary_font {
+            font-weight: 600;
+        }
+    </style>
+
+
+    <!---------------------------------------------------------- Success Story Start ------------------------------------------------------>
+    <section class="padding_bottom_100 success_story_section">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="section_heading text-center margin_bottom_60">
+                <h2 class="secondary_font color_000 margin_bottom_15 aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">
+                    Success Stories
+                </h2>
+                <p data-aos-duration="1000" data-aos="fade-up" class="aos-init aos-animate">
+                    Empowering businesses with innovative design, telecom, cloud, and lead generation solutions.
+                </p>
+                <a href="{% url 'otleads.contact_us' %}" class="mb-3 btn_success_story aos-init" data-aos-duration="1200" data-aos="fade-up">
+                    Discover o2 Infosystems
+                </a>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="row">
+                <!-- CRMs Deployed -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer red_box">
+                        <div class="inner_counter_outer">
+                            <div class="count_box secondary_font color_fa2c68 aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                1320
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_fa2c68 aos-init" data-aos-duration="1200" data-aos="fade-up">Service Provide</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Streamlining customer management for businesses through our custom Cloud solutions.
+                    </p>
+                </div>
+
+                <!-- Leads Generated -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer purple_box">
+                        <div class="inner_counter_outer">
+                            <div class="secondary_font count_box color_5d088e aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                95k+
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_5d088e aos-init" data-aos-duration="1200" data-aos="fade-up">Leads Generated</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Empowering businesses to grow through targeted lead generation and promotional services.
+                    </p>
+                </div>
+
+                <!-- Satisfied Clients -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-4 story_box text-center">
+                    <div class="counter_outer green_box">
+                        <div class="inner_counter_outer">
+                            <div class="secondary_font count_box color_32d05e aos-init" data-aos-duration="1200" data-aos="fade-up">
+                                480+
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="secondary_font color_32d05e aos-init" data-aos-duration="1200" data-aos="fade-up">Satisfied Clients</h5>
+                    <p class="aos-init" data-aos-duration="1400" data-aos="fade-up">
+                        Businesses across industries trust o2 Infosystems for telecom, cloud, and hosting solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------ Success Story End ------------------------------------------------------->
+{% endblock section %}

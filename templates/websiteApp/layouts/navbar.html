@@ -1,0 +1,305 @@
+{% load static %}
+
+<!--Header-->
+<header class="header01">
+    <div class="container">
+        <div class="header01_outer_box position-relative">
+            <!-- Top Bar -->
+            <div class="row header01_top_bar">
+                <div class="col-xl-8 col-lg-8 col-md-8 header01_top_bar_content">
+                    <p class="mb-0 text-dark"><strong>Welcome to o2 Infosystems - Empowering Businesses with Innovative,
+                            Scalable Software Solutions.</strong></p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 header01_top_bar_btn text-right">
+                    <a href="#" class="btn_contact_us">Live Chat</a>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="navbar navbar-expand-lg bg-white header01_navigation">
+                <div class="row w-100 m-auto">
+                    <!-- Logo -->
+                    <div class="col-xl-2 col-lg-2 col-12 no_padding outer_header01_logo">
+                        <a class="navbar-brand header01_logo" href="/">
+                            <img src="{% static 'assets/image/logo.png' %}" alt="o2 Infosystems Logo" class="img-fluid">
+                        </a>
+                        <button class="navbar-toggler header01_mobile_toggle" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <!-- Contact Info & Social Links -->
+                    <div class="col-xl-10 col-lg-10 col-12 no_padding">
+                        <div class="header01_contact_info_box hide_on_mobile">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8">
+                                    <ul class="header01_contact_list d-flex align-items-center">
+                                        <li><a href="mailto:info@o2leads.com"><i class="fas fa-envelope"></i>
+                                                info@o2leads.com</a></li>
+                                        <li><a href="tel:+01-234-6789"><i
+                                                    class="fas fa-phone-square"></i>+91-721-776-6185</a></li>
+                                        <li><i class="far fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 text-right">
+                                    <ul class="header01_social_links d-flex justify-content-end">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Menu -->
+                        <div class="collapse navbar-collapse outer_header01_navbar" id="navbarSupportedContent">
+                            <ul class="navbar-nav header01_navbar ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">Home</a>
+                                </li>
+
+                                {% comment %} <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.industry.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdownIndustries" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Industries
+                                    </a>
+                                    <div class="dropdown-menu default_dd_menu hosting_dd_menu"
+                                        aria-labelledby="navbarDropdownIndustries">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    {% for industry in nav_data.DATA.Industries|slice:":10" %}
+                                                    <!-- First 10 industries for column 1 -->
+                                                    <a class="dropdown-item {% if Industry == industry.PR_SLUG %}active{% endif %}"
+                                                        href="{% url 'otleads.industry.category' PR_INDUSTRY=industry.PR_SLUG %}">
+                                                        {{ industry.PR_NAME }}
+                                                    </a>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="col-md-6">
+                                                    {% for industry in nav_data.DATA.Industries|slice:"10:" %}
+                                                    <!-- Remaining industries for column 2 -->
+                                                    <a class="dropdown-item {% if Industry == industry.PR_SLUG %}active{% endif %}"
+                                                        href="{% url 'otleads.industry.category' PR_INDUSTRY=industry.PR_SLUG %}">
+                                                        {{ industry.PR_NAME }}
+                                                    </a>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.products.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Our Products
+                                    </a>
+                                    <div class="dropdown-menu default_dd_menu hosting_dd_menu"
+                                        aria-labelledby="navbarDropdown">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a class="dropdown-item {% if Category == 'customer-management' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='customer-management' %}">Customer
+                                                    Management</a>
+                                                <a class="dropdown-item {% if Category == 'field-sales-reporting' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='field-sales-reporting' %}">Field
+                                                    Sales Reporting</a>
+                                                <a class="dropdown-item {% if Category == 'payroll-management' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='payroll-management' %}">Payroll
+                                                    Management</a>
+                                                <a class="dropdown-item {% if Category == 'lead-management' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='lead-management' %}">Lead
+                                                    Management</a>
+                                                <a class="dropdown-item {% if Category == 'inventory-management' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='inventory-management' %}">Inventory
+                                                    Management</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="dropdown-item {% if Category == 'hrms' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='hrms' %}">HR
+                                                    Management System</a>
+                                                <a class="dropdown-item {% if Category == 'ivr' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='ivr' %}">Interactive
+                                                    Voice Response</a>
+                                                <a class="dropdown-item {% if Category == 'message-gateway' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='message-gateway' %}">Message
+                                                    Gateway</a>
+                                                <a class="dropdown-item {% if Category == 'whatsapp-gateway' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='whatsapp-gateway' %}">WhatsApp
+                                                    Gateway</a>
+                                                <a class="dropdown-item {% if Category == 'publication-engine' %}active{% endif %} "
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY='publication-engine' %}">Publication
+                                                    Engine</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.pricing.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdown08" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Pricing
+                                    </a>
+                                    <div class="dropdown-menu whmcs_dropdown default_dd_menu"
+                                        aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item {% if Type == 'crm' %}active{% endif %}"
+                                            href="{% url 'otleads.pricing.category' PR_PRICING_TYPE='crm'%}">CRM</a>
+                                        <a class="dropdown-item {% if Type == 'Management Panel' %}active{% endif %}"
+                                            href="{% url 'otleads.pricing.category' PR_PRICING_TYPE='Management Panel' %}">Management
+                                            Panels</a>
+                                    </div>
+                                </li> {% endcomment %}
+
+
+                                <!-- Industries Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.industry.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdownIndustries" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Industries
+                                    </a>
+                                    <div class="dropdown-menu default_dd_menu hosting_dd_menu"
+                                        aria-labelledby="navbarDropdownIndustries">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    {% for industry in nav_data.DATA.Industries|slice:":10" %}
+                                                    <!-- First 10 industries for column 1 -->
+                                                    <a class="dropdown-item {% if Slug == industry.PR_SLUG %}active{% endif %}"
+                                                        href="{% url 'otleads.industry.category' PR_INDUSTRY=industry.PR_SLUG %}">
+                                                        {{ industry.PR_NAME }}
+                                                    </a>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="col-md-6">
+                                                    {% for industry in nav_data.DATA.Industries|slice:"10:" %}
+                                                    <!-- Remaining industries for column 2 -->
+                                                    <a class="dropdown-item {% if Slug == industry.PR_SLUG %}active{% endif %}"
+                                                        href="{% url 'otleads.industry.category' PR_INDUSTRY=industry.PR_SLUG %}">
+                                                        {{ industry.PR_NAME }}
+                                                    </a>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Products Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.products.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Our Products
+                                    </a>
+                                    <div class="dropdown-menu default_dd_menu hosting_dd_menu"
+                                        aria-labelledby="navbarDropdownProducts">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                {% for product in nav_data.DATA.Product|slice:":5" %}
+                                                <!-- First 5 products for column 1 -->
+                                                <a class="dropdown-item {% if Slug == product.PR_SLUG %}active{% endif %}"
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY=product.PR_SLUG %}">
+                                                    {{ product.PR_NAME }}
+                                                </a>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="col-md-6">
+                                                {% for product in nav_data.DATA.Product|slice:"5:" %}
+                                                <!-- Remaining products for column 2 -->
+                                                <a class="dropdown-item {% if Slug == product.PR_SLUG %}active{% endif %}"
+                                                    href="{% url 'otleads.products.category' PR_CATEGORY=product.PR_SLUG %}">
+                                                    {{ product.PR_NAME }}
+                                                </a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.view_name == 'workobserver.pricing.category' %}active{% endif %}"
+                                        href="#" id="navbarDropdown08" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Pricing
+                                    </a>
+                                    <div class="dropdown-menu whmcs_dropdown default_dd_menu"
+                                        aria-labelledby="navbarDropdown">
+                                        {% for pricing in nav_data.DATA.Pricing|slice:":5" %}
+                                        <!-- First 5 pricing types for column 1 -->
+                                        <a class="dropdown-item {% if Slug == pricing.PR_SLUG %}active{% endif %}"
+                                            href="{% url 'otleads.pricing.category' PR_PRICING_TYPE=pricing.PR_SLUG %}">
+                                            {{ pricing.PR_NAME }}
+                                        </a>
+                                        {% endfor %}
+                                    </div>
+                                    
+                                </li>
+
+                             
+
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Contact
+                                    </a>
+                                    <div class="dropdown-menu default_dd_menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{% url 'otleads.contact' %}">Contact Us</a>
+                                        <a class="dropdown-item" href="{% url 'otleads.support' %}">Contact Support</a>
+                                        <a class="dropdown-item" href="{% url 'otleads.sales' %}">Contact Sales</a>
+                                        <a class="dropdown-item" href="{% url 'otleads.booking' %}">Shedule Metting</a>
+                                        <a class="dropdown-item" href="{% url 'otleads.help' %}">Help</a>
+                                    </div>
+                                </li> -->
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'workobserver.about' or request.resolver_match.url_name == 'workobserver.contact' or request.resolver_match.url_name == 'workobserver.policy' or request.resolver_match.url_name == 'workobserver.cookies' or request.resolver_match.url_name == 'workobserver.terms' or request.resolver_match.url_name == 'workobserver.faq' or request.resolver_match.url_name == 'workobserver.help' %}active{% endif %}" 
+                                        href="#" id="navbarDropdown08" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About
+                                    </a>
+
+                                    <div class="dropdown-menu whmcs_dropdown default_dd_menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.about' %}active{% endif %}" href="{% url 'otleads.about' %}">Who We Are</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.contact' %}active{% endif %}" href="{% url 'otleads.contact' %}">Contact Us</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.policy' %}active{% endif %}" href="{% url 'otleads.policy' %}">Privacy Policy</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.cookies' %}active{% endif %}" href="{% url 'otleads.cookies' %}">Cookies</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.terms' %}active{% endif %}" href="{% url 'otleads.terms' %}">Terms And Condition</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.faq' %}active{% endif %}" href="{% url 'otleads.faq' %}">FAQs</a>
+                                        <a class="dropdown-item {% if request.resolver_match.url_name == 'workobserver.help' %}active{% endif %}" href="{% url 'otleads.help' %}">Help</a>
+                                    </div>
+                                </li>
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'otleads.client' %}">Client</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'otleads.blog' %}">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        var currentPath = window.location.pathname;
+
+        navLinks.forEach(function (link) {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+<!--Header Ends-->

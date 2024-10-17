@@ -1,0 +1,82 @@
+/* #014b74 primary color */
+/* #014b74 new */
+/* #014b74 Old */
+
+.obser_crousel{
+    background-color: #014b74a4;
+}
+
+/* .header01_navbar li a:active {
+    color: #f7f7f7;
+    background-color: #014b74;
+} */
+
+/* Pricing Card Css */
+
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    box-shadow: 0 5px 10px rgba(238, 9, 121, 0.3);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #4e73df, #224abe);
+}
+
+.bg-gradient-info {
+    background: linear-gradient(90deg, #36b9cc, #258ca7);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(90deg, #1cc88a, #17a673);
+}
+
+.bg-gradient-light {
+    background: linear-gradient(90deg, #f8f9fa, #e9ecef);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(90deg, #343a40, #23272b);
+}
+
+.list-group-item {
+    border: none;
+    padding: 12px 20px;
+}
+
+/* Pricing Card Css End */
+
+
+.banner-text{
+    border-radius: 10px;
+    padding: 15px;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+.banner-link{
+    background-color: rgba(0, 0, 0, 0.582);
+}

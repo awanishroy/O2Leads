@@ -1,0 +1,134 @@
+{% extends "websiteApp/layouts/base.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+<meta name="description" content="{{ Seo.description }}">
+<meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<section class="sub_banner07"
+    style="height: 100vh; background-image: url('{% static 'assets/image/banner/bg_home_banner.jpg' %}'); background-size: cover; width: 100%; height: 369px; display: table; position: relative">
+    <div class="inner_sub_banner">
+        <div class="container">
+            <div class="sub_banner_content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <h1 class="secondary_font color_fff">Blog</h1>
+                        <p></p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb_list">
+                <li><a href="{% url 'index' %}" class="text-uppercase color_bfb0c8">Home &gt;</a></li>
+                <li><a class="text-uppercase" href="">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="color_ecf4f7 padding_top_100 padding_bottom_200 blog_section">
+    <div class="section_heading text-center margin_bottom_50">
+        <h2 class="secondary_font color_000 aos-init aos-animate" data-aos-duration="800" data-aos="fade-up">Our Latest Blog</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="blog" class="three-column col-xl-12">
+                <div class="row">
+                    <!-- Blog Post 1 -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="float-left w-100 post-item border margin_bottom_20">
+                            <div class="post-item-wrap position-relative">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img alt="How CRM Solutions Transform Business Relationships" src="{% static 'assets/images/standard_post_img01.jpg' %}">
+                                    </a>
+                                    <span class="post-meta-category">
+                                        <a href="#">Business</a>
+                                    </span>
+                                </div>
+                                <div class="post-item-description">
+                                    <span class="post-meta-date">
+                                        <i class="fa fa-calendar-o" aria-hidden="true"></i>October 9, 2024</span>
+                                    <span class="post-meta-comments">
+                                        <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>18 Comments</a>
+                                    </span>
+                                    <h2>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">How CRM Solutions Transform Business</a>
+                                    </h2>
+                                    <p>Customer Relationship Management (CRM) software is transforming the way businesses engage with their clients. By centralizing customer data, CRM tools help businesses create personalized experiences and long-lasting relationships. we explore how integrating CRM can boost.</p>
+                                    <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="float-left w-100 post-item border margin_bottom_20">
+                            <div class="post-item-wrap position-relative">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img alt="The Rise of AI in Healthcare Management" src="{% static 'assets/images/standard_post_img02.jpg' %}">
+                                    </a>
+                                    <span class="post-meta-category">
+                                        <a href="#">Healthcare</a>
+                                    </span>
+                                </div>
+                                <div class="post-item-description">
+                                    <span class="post-meta-date">
+                                        <i class="fa fa-calendar-o" aria-hidden="true"></i>October 5, 2024</span>
+                                    <span class="post-meta-comments">
+                                        <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>42 Comments</a>
+                                    </span>
+                                    <h2>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">The Rise of AI in Healthcare Management</a>
+                                    </h2>
+                                    <p>Artificial intelligence is revolutionizing the healthcare industry, from diagnostics to patient care management. In this blog, we discuss how AI-driven tools are streamlining workflows for healthcare professionals and improving patient outcomes with data-driven insights.</p>
+                                    <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="float-left w-100 post-item border margin_bottom_20">
+                            <div class="post-item-wrap position-relative">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img alt="Inventory Management: The Key to Streamlining Operations" src="{% static 'assets/images/standard_post_img04.jpg' %}">
+                                    </a>
+                                    <span class="post-meta-category">
+                                        <a href="#">Operations</a>
+                                    </span>
+                                </div>
+                                <div class="post-item-description">
+                                    <span class="post-meta-date">
+                                        <i class="fa fa-calendar-o" aria-hidden="true"></i>September 29, 2024</span>
+                                    <span class="post-meta-comments">
+                                        <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>25 Comments</a>
+                                    </span>
+                                    <h2>
+                                        <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}">Inventory Management: The Key to Streamlining Operations</a>
+                                    </h2>
+                                    <p>Effective inventory management is critical to a business’s success. In this article, we explore the benefits of real-time inventory tracking, minimizing stockouts, and enhancing your supply chain visibility to streamline business operations.</p>
+                                    <a href="{% url 'otleads.single.blog' PR_SLUG="how-to-use-ai-in-business" %}" class="item-link">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock section %}

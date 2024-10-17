@@ -1,0 +1,140 @@
+{% extends "websiteApp/layouts/base_1.html" %}
+{% load static %}
+
+{% block title %} {{ Seo.title }} {% endblock title %}
+{% block meta %}
+    <meta name="description" content="{{ Seo.description }}">
+    <meta name="keywords" content="{{ Seo.keywords }}">
+{% endblock meta %}
+
+{% block section %}
+
+<section class="padding_bottom_100 padding_top_100 ">
+    <video autoplay loop muted playsinline class="video-background">
+        <source src="{% static 'assets/video/video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Company Information -->
+            <div class="col-md-6 mt-5 mt-md-0 info-card">
+                <div class="company-info">
+                    <h4 class="display-4 font-weight-bold mb-4">Our Expertise</h4>
+                    <p class="font_size_18 line_height_24 mb-4">At o2 Infosystems, we offer a comprehensive suite of cutting-edge telecom, cloud hosting, and lead generation solutions, designed to enhance business productivity and streamline processes. Our goal is to empower businesses with tools that accelerate growth, improve efficiency, and optimize customer engagement.</p>
+
+                    <ul class="list-unstyled font_size_18">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i>Lead and Sales Generation</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i>Telecom Solutions</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i>IVR Solutions</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i>Cloud Hosting Services</li>
+                    </ul>
+
+                    <div class="contact-details mt-4">
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+91-721-776-6185" class="">+91-721-776-6185</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:support@o2infosystems.com" class="">support@o2infosystems.com</a></p>
+                    </div>
+
+                    <div class="social-icons mt-3">
+                        <a href="#" class=" mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class=" mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class=" mr-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-6 font_size_18">
+                <div class="contact-form bg-light p-4 rounded shadow">
+                    <h4 class="text-dark font-weight-bold mb-4">Get In Touch With O2 Infosystems</h4>
+                    <form action="#" method="post">
+                        <div class="form-group mb-3">
+                            <label for="name" class="text-dark">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email" class="text-dark">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="subject" class="text-dark">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="message" class="text-dark">Message</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gradient btn-block mt-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-form {
+        border-radius: 15px;
+        background-color: #ffffff;
+    }
+    .info-card{
+        border-radius: 10px;
+        padding: 28px;
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0.432);
+    }
+
+    .form-control {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px 15px;
+    }
+
+    .btn-gradient {
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        color: white;
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+        background: linear-gradient(90deg, #ee0979, #ff6a00);
+        box-shadow: 0 5px 10px rgba(238, 9, 121, 0.3);
+    }
+
+  
+
+    .contact-details i {
+        color: #ff6a00;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #ff6a00;
+    }
+
+    .padding_top_100,
+    .padding_bottom_100 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+</style>
+
+<style>
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+</style>
+
+{% endblock section %}
