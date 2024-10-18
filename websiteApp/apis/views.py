@@ -4,7 +4,6 @@ from websiteApp.helpers import *
 from . helpers import *
 from . serializers import *
 from django.core.exceptions import ObjectDoesNotExist
-from rest_framework import viewsets
 from django.http import HttpResponse
 
 
