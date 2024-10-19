@@ -203,7 +203,7 @@
                                         aria-labelledby="navbarDropdownProducts">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                {% for product in nav_data.DATA.Product|slice:":5" %}
+                                                {% for product in nav_data.DATA.PR_OUR_PRODUCT|slice:":5" %}
                                                 <!-- First 5 products for column 1 -->
                                                 <a class="dropdown-item {% if Slug == product.PR_SLUG %}active{% endif %}"
                                                     href="{% url 'otleads.products.category' PR_CATEGORY=product.PR_SLUG %}">
@@ -212,7 +212,7 @@
                                                 {% endfor %}
                                             </div>
                                             <div class="col-md-6">
-                                                {% for product in nav_data.DATA.Product|slice:"5:" %}
+                                                {% for product in nav_data.DATA.PR_INDUSTRY|slice:"5:" %}
                                                 <!-- Remaining products for column 2 -->
                                                 <a class="dropdown-item {% if Slug == product.PR_SLUG %}active{% endif %}"
                                                     href="{% url 'otleads.products.category' PR_CATEGORY=product.PR_SLUG %}">
@@ -231,7 +231,7 @@
                                     </a>
                                     <div class="dropdown-menu whmcs_dropdown default_dd_menu"
                                         aria-labelledby="navbarDropdown">
-                                        {% for pricing in nav_data.DATA.Pricing|slice:":5" %}
+                                        {% for pricing in nav_data.DATA.PR_PLAN_MODULE|slice:":5" %}
                                         <!-- First 5 pricing types for column 1 -->
                                         <a class="dropdown-item {% if Slug == pricing.PR_SLUG %}active{% endif %}"
                                             href="{% url 'otleads.pricing.category' PR_PRICING_TYPE=pricing.PR_SLUG %}">
