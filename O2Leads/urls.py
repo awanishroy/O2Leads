@@ -21,6 +21,4 @@ from django.urls import path,include
 urlpatterns = [
     
     path('', include('websiteApp.pages.urls')),
-    path('api/', include('websiteApp.apis.urls')),
-
 ]
